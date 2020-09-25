@@ -39,7 +39,7 @@ const EventForm = () => {
       dispatch({ type: DELETE_ALL_EVENTS })
 
       dispatch({
-        type: DELETE_ALL_OPERATION_LOGS,
+        type: ADD_OPERATION_LOG,
         description: '全てのイベントを削除しました。',
         operatedAt: timeCurrentIso8601()
       })
