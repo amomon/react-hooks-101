@@ -22,7 +22,6 @@ jobs:
       - run:
           name: 依存関係のインストール
           command: yarn install --frozen-lockfile
-
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
@@ -31,7 +30,6 @@ jobs:
       - run: yarn install --frozen-lockfile --ignore-optional
       - run: yarn build
       - run: yarn test
-
       - save_cache:
           name: Save Yarn Package Cache
           key: yarn-packages-{{ checksum "yarn.lock" }}
